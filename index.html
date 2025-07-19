@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Ayu 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: url('bg1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      animation: backgroundSwitch 30s infinite;
+      backdrop-filter: blur(6px);
+      text-align: center;
+      color: #d63384;
+    }
+    @keyframes backgroundSwitch {
+      0% { background-image: url('bg1.jpg'); }
+      25% { background-image: url('bg2.jpg'); }
+      50% { background-image: url('bg3.jpg'); }
+      75% { background-image: url('bg4.jpg'); }
+      100% { background-image: url('bg5.jpg'); }
+    }
+    .container {
+      background: rgba(255, 240, 250, 0.85);
+      padding: 20px;
+      margin: 50px auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 20px;
+      border: 2px dashed #ff69b4;
+      box-shadow: 0 0 20px #ffb6c1;
+    }
+    h1, p {
+      margin-bottom: 20px;
+    }
+    .question {
+      margin-bottom: 30px;
+    }
+    .question button {
+      display: block;
+      margin: 8px auto;
+      padding: 10px 20px;
+      border: none;
+      background-color: #ffb6c1;
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="quiz">
+    <h1>Hello Kitty Quiz for My Ayu 🐱💕</h1>
+    <div class="question" id="q1">
+      <p>What's your anniversary date?</p>
+      <button onclick="nextQuestion('q1', 'q2')">14 August</button>
+      <button onclick="nextQuestion('q1', 'q2')">3 June</button>
+      <button onclick="nextQuestion('q1', 'q2')">1 May</button>
+      <button onclick="nextQuestion('q1', 'q2')">29 July ✅</button>
+    </div>
+    <div class="question hidden" id="q2">
+      <p>How many years you have been dating?</p>
+      <button onclick="nextQuestion('q2', 'q3')">2 years</button>
+      <button onclick="nextQuestion('q2', 'q3')">3 years</button>
+      <button onclick="nextQuestion('q2', 'q3')">5 months</button>
+      <button onclick="nextQuestion('q2', 'q3')">1 year ✅</button>
+    </div>
+    <div class="question hidden" id="q3">
+      <p>How much you love your boyfriend?</p>
+      <button onclick="showMessage()">A lot</button>
+      <button onclick="showMessage()">More than chocolate</button>
+      <button onclick="showMessage()">To the moon and back</button>
+      <button onclick="showMessage()">Infinity ♾️ ✅</button>
+    </div>
+  </div>
+  <div class="container hidden" id="message">
+    <h1>For Ayu, My Love 💖</h1>
+    <p>We met on 29th July 2024, a day my heart will never forget. Since then, every sunrise has whispered your name, and every night has dreamt of your smile.<br><br>
+    Though 444 kilometers stretch between us, not even the sky feels that far when I close my eyes and think of you.<br><br>
+    385 days have passed, yet my love grows stronger with every second. You are my peace in chaos, my warmth in distance, my forever in a world of moments.<br><br>
+    No matter how many miles lie between us, Ayu, my heart has always been right there with you. And it always will be. ❤️</p>
+  </div>
+  <script>
+    function nextQuestion(currentId, nextId) {
+      document.getElementById(currentId).classList.add('hidden');
+      document.getElementById(nextId).classList.remove('hidden');
+    }
+    function showMessage() {
+      document.getElementById('quiz').classList.add('hidden');
+      document.getElementById('message').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
